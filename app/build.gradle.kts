@@ -10,6 +10,21 @@ android {
     namespace = "com.alpin.chat"
     compileSdk = 34
 
+    signingConfigs {
+        create("release") {
+            val ciKeystore = file("keystore.jks")
+            val localKeystore = rootProject.file("release.jks")
+            val keystoreFile = if (ciKeystore.exists()) ciKeystore else localKeystore
+
+            if (keystoreFile.exists()) {
+                storeFile = keystoreFile
+                storePassword = System.getenv("KEYSTORE_PASSWORD")
+                keyAlias = System.getenv("KEY_ALIAS")
+                keyPassword = System.getenv("KEY_PASSWORD")
+            }
+        }
+    }
+
     defaultConfig {
         applicationId = "com.alpin.chat"
         minSdk = 26
@@ -51,6 +66,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("release")
         }
     }
 
