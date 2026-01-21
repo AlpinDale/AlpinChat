@@ -27,3 +27,8 @@ The APK will be at `app/build/outputs/apk/debug/app-debug.apk`. You can either t
 ```bash
 adb install app/build/outputs/apk/debug/app-debug.apk
 ```
+
+
+## TODO
+- [ ] Web Search
+- [ ] Image Attachment
