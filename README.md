@@ -4,7 +4,7 @@ A native Android chat app for local LLMs via OpenAI-compatible APIs. Designed to
 
 Material Design 3, with a built-in tokenizer for token counting (GLM-4 tokenizer only for now, as that's the model I use.)
 
-![](./assets/alpinchat.png)
+![](./assets/alpinchat.jpg)
 
 
 ## Build
