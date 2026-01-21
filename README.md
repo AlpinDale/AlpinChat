@@ -7,6 +7,11 @@ Material Design 3, with a built-in tokenizer for token counting (GLM-4 tokenizer
 ![](./assets/alpinchat.jpg)
 
 
+## Installation
+
+Download the latest APK from the [Releases](https://github.com/alpindale/AlpinChat/releases) page.
+
+
 ## Build
 
 **Requirements:**
